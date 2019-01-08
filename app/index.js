@@ -30,7 +30,7 @@ home.addEventListener('click', () => {
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
     center: sweden,
-    zoom: 10,
+    zoom: 8,
     styles: mapStyle
   });
 
@@ -160,7 +160,7 @@ function getHostData(eventData) {
 
     meetupLogo.classList.add('displayNone');
     meetupLogo.classList.remove('loading');
-    document.querySelector('.meetupBox').classList.add('showBlinder');
+    document.querySelector('.meetupBox').classList.add('active');
   });
 }
 
@@ -301,7 +301,7 @@ function favoriteVisualizer() {
   const favoriteBox = document.querySelector('.favoriteBox');
 
   isHeartClicked = true;
-  document.querySelector('.blinder').classList.add('showBlinder');
+  document.querySelector('.blinder').classList.add('active');
   document.querySelector('.mapBox').classList.add('disappear');
   document.querySelector('.meetupBox').classList.add('disappear');
   document.querySelector('.delete').classList.add('showDeleteExit');
@@ -322,7 +322,7 @@ function exitFavorite() {
   const favoriteBox = document.querySelector('.favoriteBox');
   
   isHeartClicked = false;
-  document.querySelector('.blinder').classList.remove('showBlinder');
+  document.querySelector('.blinder').classList.remove('active');
   document.querySelector('.mapBox').classList.remove('disappear');
   document.querySelector('.meetupBox').classList.remove('disappear');
   document.querySelector('.delete').classList.remove('showDeleteExit');
@@ -344,4 +344,3 @@ $.ajax({
 
 // You can use jquery for ajax request purpose only.
 import $ from 'jquery';
-
