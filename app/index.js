@@ -27,7 +27,7 @@ home.addEventListener('click', () => {
 });
 
 function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
+  map = new google.maps.Map(document.getElementById('map'), {
     center: sweden,
     zoom: 8,
     styles: mapStyle
@@ -85,6 +85,7 @@ function meetupDataFilter(area) {
 
     if(!events.length) {
       meetupLogo.classList.remove('loading');
+
       return alert('There is no meetup.. Please click another city!');
     }
     
